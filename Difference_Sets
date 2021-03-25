@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Difference(int a[], int b[], int n, int m)
+{
+    for(int i=0;i<n;i++)
+    {
+        int ok = 1;
+        for(int j=0;j<m;j++)
+        {
+            if(a[i] == b[j])
+            {
+                ok = 0;
+                break;
+            }
+        }
+        if(ok)
+            printf("%d ", a[i]);
+    }
+    
+}
+
+int main()
+{
+    int i,n,m;
+    
+    printf("Enter size of first set :- ");
+    scanf("%d", &n);
+    
+    int first_set[n];
+    
+    printf("Enter set elements in ascending order\n");
+    
+    for(i=0;i<n;i++)
+        scanf("%d", &first_set[i]);
+        
+    printf("Enter size of second set :-");
+    scanf("%d", &m);
+    
+    int second_set[m];
+    
+    printf("Enter set elements in ascending order\n");
+    
+    for(i=0;i<m;i++)
+        scanf("%d", &second_set[i]);
+        
+    printf("Difference of above two sets ie. first_set - second_set is\n");
+    Difference(first_set, second_set, n, m);
+    
+}
+
