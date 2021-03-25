@@ -46,7 +46,7 @@ int main()
     for(i=0;i<m;i++)
         scanf("%d", &second_set[i]);
         
-    printf("Union of above two sets is\n");
+    printf("Intersection of above two sets is\n");
     Intersection_Set(first_set, second_set, n, m);
     
 }
